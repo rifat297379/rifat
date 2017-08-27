@@ -1,0 +1,8 @@
+if (abandonedConfig != null &&
+                (abandonedConfig.getRemoveAbandonedOnBorrow() ||
+                 abandonedConfig.getRemoveAbandonedOnMaintenance())) {
+            gop = new GenericObjectPool<>(factory, config, abandonedConfig);
+        }
+        else {
+            gop = new GenericObjectPool<>(factory, config);
+        }
